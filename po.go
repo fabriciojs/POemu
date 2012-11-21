@@ -15,15 +15,28 @@ import (
 
 var media = flag.String("media", "", "Media Code [1, 14]")
 var query = flag.String("query", "", "Keyword to query")
-var cod_busca = flag.String("cod_busca", "", "o Código da busca")
 var limit = flag.String("limit", "2000", "limit items amount, first import")
 var search_port = flag.String("rpc_port", "8222", "The RPC port to connect to the search service")
+
+var cod_busca = flag.String("cod_busca", "", "o Código da busca")
+var cod_monitoramento = flag.String("cod_monitoramento", "", "o Código do monitoramento")
+var cod_conta = flag.String("cod_conta", "", "o Código da conta")
 
 func main() {
 	flag.Parse()
 
 	if *query == "" {
 		fmt.Println("You must provide the --query param.")
+		os.Exit(1)
+	}
+
+	if *cod_conta == "" {
+		fmt.Println("You must provide the --cod_conta param.")
+		os.Exit(1)
+	}
+
+	if *cod_monitoramento == "" {
+		fmt.Println("You must provide the --cod_monitoramento param.")
 		os.Exit(1)
 	}
 
