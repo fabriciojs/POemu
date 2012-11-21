@@ -57,7 +57,7 @@ func main() {
 	search["First"] = "1"
 	search["Feed"] = "http://livebuzz.com.br/dev/importapi/search/store"
 	// search["Extid"] = fmt.Sprintf("116.116.0.%s.%s", *cod_busca, *media)
-	search["Extid"] = fmt.Sprintf("118.1.0.%s.%s", *cod_busca, *media)
+	search["Extid"] = fmt.Sprintf("%s.%s.0.%s.%s", *cod_conta, *cod_monitoramento, *cod_busca, *media)
 
 	search["Limit"] = *limit
 
