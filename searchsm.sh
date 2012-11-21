@@ -1,6 +1,6 @@
 echo "Compiling...";
 
-go build po.go;
+./compile.sh;
 
 echo "Done.";
 echo "Injectin...";
